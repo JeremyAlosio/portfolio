@@ -1,0 +1,10 @@
+Static Sidebar
+Sidebar includes all contact information
+
+Modules that contain a project each
+Modules include label that says their status
+Modules can be clicked on for a increased size view and can have further options for accessing them on git
+
+Module Detailed View will include short description
+
+Moveable top bar?
