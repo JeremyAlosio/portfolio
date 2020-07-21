@@ -1,0 +1,33 @@
+.toggle-button {
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;  
+  transition: transform 0.3s ease-out;
+}
+
+.toggle-button.hovered {
+    transform: rotate(90deg);
+}
+
+.toggle-button.unhover {
+  transform: rotate(-90deg);
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button_line {
+  width: 100%;
+  height: 2px;
+
+  background-color: black;
+}
