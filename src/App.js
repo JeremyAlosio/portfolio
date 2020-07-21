@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Sidebar from "./Sidebar"
+import GrayoutCurtain from './Objects/GrayoutCurtain';
+import DrawerToggleButton from './Objects/DrawerToggleButton';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    sideDrawerOpen: false
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen }
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  }
+
+  render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <GrayoutCurtain click={this.backdropClickHandler}/>
+    }
+
+    return (
+      <div className="App">
+        <div className="hamburger">
+          <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+        </div>
+        {backdrop}
+        <Sidebar show={this.state.sideDrawerOpen}/>
+        
+
+        
+        <h1>HELLO REACT!</h1>
+      </div>
+    );
+  }
 }
 
 export default App;
