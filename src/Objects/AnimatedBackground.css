@@ -1,0 +1,54 @@
+.star_core {
+  height: 6px;
+  width: 6px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 100%;
+  display: inline-block;
+  transform: translateY(-13px) translateX(-6px);
+}
+
+.star:hover .star_streak {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.star:hover .star_core {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.star_streak {
+  background-color: rgba(255, 255, 255, .5);
+  border: none;
+  width: 200px;
+  height: 2px;
+  display: inline-block;
+  transform: translateY(7px) translateX(0px);
+}
+
+.star {
+  width: 400px;
+  height: 14px;
+  transform: rotate(-45deg);
+}
+
+#star_1 { 
+  margin-left: 900px;
+  margin-top: -30px;
+  animation: 3.7s ease-in 7s infinite falling;
+}
+
+#star_2 { 
+  margin-left: 400px;
+  margin-top: -30px;
+  animation: 3.1s ease-in 3s infinite falling;
+}
+
+#star_3 { 
+  margin-left: 100px;
+  margin-top: -30px;
+  animation: 3.4s ease-in 5s infinite falling;
+}
+
+@keyframes falling {
+  0% { transform: translateX(700px) translateY(-700px) rotate(-45deg);  }
+  100% { transform: translateX(-700px) translateY(700px) rotate(-45deg);  }
+}

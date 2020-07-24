@@ -1,0 +1,38 @@
+.button {
+  width: 250px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 1px;
+  margin: 10px;
+  transition: background .3s ease-out;
+}
+
+.button.hovered {
+    background-color: transparent;
+}
+
+.button:focus {
+  outline: none;
+}
+
+#arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: translateY(-3px) rotate(45deg);
+}
+
+.hovered #arrow {
+  animation-duration: 1s;
+  animation-name: floating;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes floating {
+  0% { transform: translateY(-9px) rotate(45deg);  }
+  100% { transform: translateY(3px) rotate(45deg);  }
+}
