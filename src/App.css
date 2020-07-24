@@ -1,10 +1,14 @@
-.App {
+.title_text {
+  color: white;
   text-align: center;
+  margin-left: -50px; /* margin is -0.5 * dimension */
+  margin-top: 150px; 
 }
 
-.hamburger {
+.background {
+  height: 700px;
+  width: 100%;
+  background: linear-gradient(213deg, rgba(0,0,0,1) 0%, rgba(13,0,21,1) 35%, rgba(4,0,32,1) 100%);
   top: 0;
   left: 0;
-  padding-left: 1%;
-  padding-top: 1%;
 }
