@@ -1,0 +1,23 @@
+.paddle {
+    fill: white;
+  }
+  
+  #ball {
+   fill: white; 
+  }
+  
+  .difficulty-font {
+    font-size:10
+  }
+
+#rightPaddle {
+    fill: white;
+}
+
+.pongEntities {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}

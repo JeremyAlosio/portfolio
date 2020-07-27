@@ -8,8 +8,4 @@
 .background {
   height: 100%;
   width: 100%;
-  position: absolute;
-  background: linear-gradient(213deg, rgba(0,0,0,1) 0%, rgba(13,0,21,1) 35%, rgba(4,0,32,1) 100%);
-  top: 0;
-  left: 0;
 }
