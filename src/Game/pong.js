@@ -14,11 +14,11 @@ class Pong extends Component {
             WindowWidth: window.innerWidth,
 
             leftPaddle_x: 5/window.innerWidth,
-            leftPaddle_y: 0,
+            leftPaddle_y: window.innerHeight/2-50,
             leftPaddle_height: 100,
             leftPaddle_width: 15,
             rightPaddle_x: window.innerWidth-((5/window.innerWidth)+15),
-            rightPaddle_y: 10,
+            rightPaddle_y: window.innerHeight/2-50,
             rightPaddle_height: 100,
             rightPaddle_width: 15,
             ball_cx: ballCenterX,
@@ -30,8 +30,8 @@ class Pong extends Component {
             baseBallSpeed: 4.0,
             ballSpeed: 4.0,
 
-            rightPaddleEnabled: false,
-            leftPaddleEnabled: true,
+            rightPaddleEnabled: true,
+            leftPaddleEnabled: false,
 
             lag: 0.0,
             lagSwitch: false,
@@ -111,7 +111,7 @@ class Pong extends Component {
         const { lag, leftPaddle_y, ball_cy } = this.state;
         if (this.state.leftPaddleEnabled) {
             this.setState({ 
-                leftPaddle_y: leftPaddle_y + this.moveTowardBall(ball_cy-(leftPaddle_y/4), leftPaddle_y, 7)
+                leftPaddle_y: leftPaddle_y + this.moveTowardBall(ball_cy, leftPaddle_y, 10)
             });
         }
     }
@@ -121,7 +121,7 @@ class Pong extends Component {
 
         if (this.state.rightPaddleEnabled) {          
             this.setState({ 
-                rightPaddle_y: rightPaddle_y + this.moveTowardBall(ball_cy-(rightPaddle_y/4), rightPaddle_y, 7)
+                rightPaddle_y: rightPaddle_y + this.moveTowardBall(ball_cy, rightPaddle_y, 10)
             });
         }
         
